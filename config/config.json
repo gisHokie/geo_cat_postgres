@@ -1,0 +1,108 @@
+{
+  "version": "1",
+  "description": "store location of shapes and geometries",
+  "in_data" : ".\\in_data",
+  "out_data" : ".\\out_data",
+  "backup_data" : ".\\bkup_data",
+  "US_Census": {
+    "domain_url": "www.census.gov",
+	"shape_url" : "https://www.census.gov/geo/maps-data/data/tiger-line.html",
+	"ftp_url" : "ftp://ftp2.census.gov/geo/tiger/TIGER2018/",
+	"web_type" : "ftp",
+    "domain_description": "US Census Bureau",
+	"version" : 1,
+    "shapefiles": [
+      {
+        "feature_name": "us-states",
+		"file_feat_name": "tl_2017_us_state",
+        "feature_url": "ftp://ftp2.census.gov/geo/tiger/TIGER2018/state",
+        "feature_file_type": "zip",
+        "fields": [
+          "geoid",
+          "name",
+		  "stusps",
+		  "geom"
+        ]
+      },
+      {
+        "feature_name": "us-counties",
+		"file_feat_name": "tl_2017_us_county",
+        "feature_url": "ftp://ftp2.census.gov/geo/tiger/TIGER2018/county",
+        "feature_file_type": "zip",
+        "fields": [
+          "geoid",
+          "name",
+		  "NAMELSAD",
+		  "geom"
+        ]
+      },
+      {       
+		"feature_name": "us-zipcodes",
+		"file_feat_name": "tl_2017_us_zcta510",
+        "feature_url": "ftp://ftp2.census.gov/geo/tiger/TIGER2018/zip_codes",
+        "feature_file_type": "zip",
+        "fields": [
+          "geoid10",
+          "ZCTA5CE10",
+		  "geom"
+        ]
+		},
+      {       
+		"feature_name": "us-censusblocks",
+		"file_feat_name": "tl_2017_us_censusblock",
+        "feature_url": "ftp://ftp2.census.gov/geo/tiger/TIGER2018/census_blocks",
+        "feature_file_type": "zip",
+        "fields": [
+          "geoid",
+          "name",
+		  "stusps",
+		  "geom"
+        ]
+	   },
+      {       
+		"feature_name": "coastline",
+		"file_feat_name": "tl_2017_us_coastlines",
+        "feature_url": "",
+        "feature_file_type": "zip",
+        "fields": [
+          "MTFCC",
+          "name",
+		  "geom"
+        ]
+	   }	   
+    ]
+  },
+  "NHC": {
+    "domain_url": "www.census.gov",
+	"shape_url" : "https://www.nhc.noaa.gov/gis/",
+	"ftp_url" : "",
+	"web_type" : "ftp",
+    "domain_description": "US NOAA National Hurricane Center",
+	"version" : 1,
+    "shapefiles": [
+      {
+        "feature_name": "us-hurricanes",
+		"file_feat_name": "",
+        "feature_url": "ftp://ftp2.census.gov/geo/tiger/TIGER2018/state",
+        "feature_file_type": "zip",
+        "fields": [
+          "stormnum",
+          "stormname",
+		  "advdate",
+		  "geom"
+        ]
+      },{
+        "feature_name": "us-hurricanes",
+		"file_feat_name": "hurricanes-archive",
+        "feature_url": "https://www.nhc.noaa.gov/gis/archive_forecast_results.php",
+        "feature_file_type": "zip",
+        "fields": [
+          "stormnum",
+          "stormname",
+		  "advdate",
+		  "geom"
+        ]
+      }
+	  ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "properties":{
+	  "version": "1",
+	  "description": "store location of shapes and geometries",
+	  "in_data" : ".\\in_data",
+	  "out_data" : ".\\out_data",
+	  "backup_data" : ".\\bkup_data"
+  },
+  "US_Census": {
+    "domain_url": "www.census.gov",
+	"shape_url" : "https://www.census.gov/geo/maps-data/data/tiger-line.html",
+	"ftp_url" : "ftp://ftp2.census.gov/geo/tiger/TIGER2018/",
+	"web_type" : "ftp",
+    "domain_description": "US Census Bureau",
+	"version_number" : 1,
+    "shapefiles": [
+      {
+        "full_path_zip_abs": ".\\in_data\\tl_2017_us_state.zip",
+		"full_path_shp_abs": ".\\in_data\\tl_2017_us_county.zip\\tl_2017_us_state.shp",
+		"geo_object_feature_type": "29",
+		"file_feat_name": "tl_2017_us_state",
+        "source_url": "43",
+        "feature_file_type": "zip",
+		"time_interval" : "annual",
+		"ogr_fieldmap": "-1,-1,-1,-1,1,-1,0,-1,-1,-1,-1,-1,-1,-1",
+        "feat_geom_type" : "2"
+      },
+      {
+        "full_path_zip_abs": ".\\in_data\\tl_2017_us_state_centroid.zip",
+		"full_path_shp_abs": ".\\out_data\\tl_2017_us_state_centroid\\tl_2017_us_state_centroid.shp",
+		"geo_object_feature_type": "30",
+		"file_feat_name": "tl_2017_us_state_centroid",
+        "source_url": "43",
+        "feature_file_type": "zip",
+		"time_interval" : "annual",
+		"ogr_fieldmap": "-1,-1,-1,-1,1,-1,0,-1,-1,-1,-1,-1,-1,-1",
+        "feat_geom_type" : "1"
+      },
+      {
+		"full_path_zip_abs": ".\\in_data\\tl_2017_us_county.zip",
+		"full_path_shp_abs": ".\\in_data\\tl_2017_us_county.zip\\tl_2017_us_county.shp",
+		"geo_object_feature_type": "31",
+		"file_feat_name": "tl_2017_us_county",
+        "source_url": "62",
+        "feature_file_type": "zip",
+		"time_interval" : "annual",
+		"ogr_fieldmap": "-1,-1,-1,1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+        "feat_geom_type" : "2"
+      },
+      {       
+		"full_path_zip_abs": ".\\in_data\\tl_2017_us_zcta510.zip",
+		"full_path_shp_abs": ".\\out_data\\tl_2017_us_zcta510\\tl_2017_us_zcta510.shp",
+		"geo_object_feature_type": "32",
+		"file_feat_name": "tl_2017_us_zcta510",
+        "source_url": "64",
+        "feature_file_type": "zip",
+		"time_interval" : "annual",
+		"ogr_fieldmap": "1,0,-1,-1,-1,-1,-1,-1,-1",
+       "feat_geom_type" : "2"
+		},
+      {       
+		"full_path_zip_abs": ".\\in_data\\tl_2017_us_censusblock.zip",
+		"full_path_shp_abs": ".\\out_data\\tl_2017_us_censusblock\\tl_2017_us_censusblock.shp",
+		"geo_object_feature_type": "33",
+		"file_feat_name": "tl_2017_us_censusblock",
+        "source_url": "63",
+        "feature_file_type": "zip",
+		"time_interval" : "annual",
+		"ogr_fieldmap": "",
+        "feat_geom_type" : "2"
+	   },
+      {       
+		"full_path_zip_abs": ".\\in_data\\tl_2017_us_coastline.zip",
+		"full_path_shp_abs": ".\\out_data\\tl_2017_us_coastline\\tl_2017_us_coastline.shp",
+		"geo_object_feature_type": "34",
+		"file_feat_name": "tl_2017_us_coastline",
+        "source_url": "65",
+        "feature_file_type": "zip",
+		"time_interval" : "annual",
+		"ogr_fieldmap": "identity,-1,0,1",
+		"feat_geom_type" : "3"
+	   }   
+    ]
+  },
+  "NHC": {
+    "domain_url": "https://www.nhc.noaa.gov/",
+	"shape_url" : "https://www.nhc.noaa.gov/gis/",
+	"ftp_url" : "",
+	"web_type" : "zip",
+    "domain_description": "US NOAA National Hurricane Center",
+	"version_number" : 1,
+    "shapefiles": [
+      {
+        "full_path_zip_abs": "",
+		"full_path_shp_abs": "",
+		"geo_object_feature_type": "35",
+		"file_feat_name": "",
+        "source_url": "ftp://ftp2.census.gov/geo/tiger/TIGER2018/state",
+        "feature_file_type": "zip",
+		"time_interval" : "daily",
+		"ogr_fieldmap": "",
+        "feat_geom_type" : "2"
+		
+      },{
+        "full_path_zip_abs": "",
+		"full_path_shp_abs": "",
+		"geo_object_feature_type": "35",
+		"file_feat_name": "hurricanes-archive",
+        "source_url": "https://www.nhc.noaa.gov/gis/archive_forecast_results.php",
+        "feature_file_type": "zip",
+		"time_interval" : "manual",
+		"ogr_fieldmap": "",
+        "feat_geom_type" : "2"
+      }
+	  ]
+  }
+}
